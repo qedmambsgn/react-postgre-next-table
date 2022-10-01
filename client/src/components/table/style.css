@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #aba8a6;
+  border: 2px solid black; }
+
+.chosenPage {
+  background-color: #fffa; }
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding: 20px; }
+  .filter-container select, .filter-container input {
+    background: transparent;
+    border: 3px solid #fffa; }
+  .filter-container select:hover {
+    cursor: pointer; }
+
+.table {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  font-size: 18px; }
+  .table table {
+    border: 1px solid #fffa;
+    width: 960px; }
+    .table table th {
+      border: 1px solid #fffa; }
+    .table table td {
+      border: 1px solid #fffa; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin: auto 40px;
+  align-items: center; }
+  .footer .page-select {
+    display: flex;
+    align-items: center; }
+  .footer select {
+    display: flex;
+    max-height: 30px;
+    text-align: center;
+    background: transparent;
+    border: 3px solid #fffa; }
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none; }
+    .footer ul li:hover {
+      cursor: pointer; }
+  .footer .pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer .pagination li {
+      border-radius: 50%;
+      border: 2px solid #fffa;
+      margin: 5px;
+      cursor: pointer; }
+    .footer .pagination button {
+      border: none;
+      background: transparent;
+      width: 30px;
+      height: 30px; }
+    .footer .pagination button:focus {
+      outline: none;
+      box-shadow: none; }
+
+@media only screen and (min-width: 320px) and (max-width: 567px) {
+  .table table {
+    width: 290px; }
+
+  .filter-container {
+    flex-direction: column; }
+    .filter-container select {
+      max-width: 202px;
+      margin-top: 5px; }
+
+  .footer ul {
+    max-width: 160px; } }
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .table table {
+    width: 500px; }
+
+  .filter-container {
+    padding-left: 100px;
+    flex-direction: column; }
+    .filter-container select {
+      max-width: 202px;
+      margin-top: 5px; }
+
+  .footer ul {
+    max-width: 300px; } }
+@media only screen and (min-width: 768px) {
+  .table table {
+    width: 650px; } }
+@media only screen and (min-width: 1024px) {
+  .table table {
+    width: 900px; } }
+@media only screen and (min-width: 1366px) {
+  .table table {
+    width: 1200px; } }
+@media only screen and (min-width: 1680px) {
+  .table table {
+    width: 1500px; } }
+
+/*# sourceMappingURL=style.css.map */

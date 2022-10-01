@@ -1,0 +1,35 @@
+version: '3.1'
+
+services:
+  frontend:
+    image: client
+    container_name: client_container
+    build:
+      context: ./client
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:3000"
+  backend:
+    image: server
+    container_name: server_container
+    build:
+      context: ./server
+    restart: always
+    tty: true
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: welbex_table
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: osminog8nog:D
+      PGDATA: /Library/PostgreSQL/14/data
+    ports:
+      - "54321:5432"
